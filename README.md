@@ -73,8 +73,8 @@ To make executable:
 Then, to run the script:
 `./path/to/usb_controller_switch`
 
-Alternatively, you can move the script to ~/.local/bin/ 
-Make sure ~/.local/bin is in your path in ~/.bashrc
+Alternatively, you can move the script to `~/.local/bin/` . 
+(Make sure `~/.local/bin` is in your path in `~/.bashrc` !)
 Then, from anywhere:
 `usb_controller_switch`
 
