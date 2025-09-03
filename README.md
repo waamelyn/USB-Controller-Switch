@@ -38,7 +38,7 @@ From this example:
 
 ### 2. Edit the Grub Config
 
-In /etc/default/grub, find the line with "GRUB_CMDLINE_LINUX_DEFAULT", and in the parentheses, add the following:
+In `/etc/default/grub`, find the line with "GRUB_CMDLINE_LINUX_DEFAULT", and in the parentheses, add the following:
 
 `intel_iommu=on iommu=pt vfio-pci.ids=8086:51ed,8086:1137,8086:1138`
 
@@ -48,19 +48,19 @@ Replace "XXXX:XXXX" with your specific controller IDs.
 
 ### 3. Update grub
 
-After editing /etc/default/grub, run the following:
+After editing `/etc/default/grub`, run the following:
 
 `sudo grub-mkconfig -o /boot/grub/grub.cfg`
 
 ### 4. Edit Initramfs Configuration
 
-Edit /etc/mkinitcpio.conf and find `MODULES=()`. Add these modules:
+Edit `/etc/mkinitcpio.conf` and find `MODULES=()`. Add these modules:
 
 `MODULES=(vfio_pci vfio vfio_iommu_type1)`
 
 ### 5. Rebuild Initramfs and Reboot
 
-After editing /etc/mkinitcpio.conf, run the following:
+After editing `/etc/mkinitcpio.conf`, run the following:
 
 `sudo mkinitcpio -p linux`
 `sudo reboot`
