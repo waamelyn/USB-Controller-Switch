@@ -42,11 +42,9 @@ From this example:
 
 In `/etc/default/grub`, find the line with "GRUB_CMDLINE_LINUX_DEFAULT", and in the parentheses, add the following:
 
-`intel_iommu=on iommu=pt vfio-pci.ids=8086:51ed,8086:1137,8086:1138`
+`intel_iommu=on iommu=pt`
 
 Note: use `amd_iommu=on` for AMD systems.
-
-Replace "XXXX:XXXX" with your specific controller IDs.
 
 ### 3. Update grub
 
