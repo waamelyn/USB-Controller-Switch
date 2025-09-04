@@ -14,6 +14,8 @@ This script uses echo commands to bind your USB controller to either your Host P
 
 This script will enable you to forward a whole USB controller rather than just one device. One example use case--my reason for creating this script--is trying to connect an Android Device in bootrom mode to an application in a Windows VM from an Arch Linux machine: in bootrom mode, the device connects and disconnects very quickly, so there is not time to select it in virt-manager; this solves the issue by forwarding the whole USB controller.
 
+Also, this script can be modified to bind any PCI device (such as a WiFi card) to vfio-pci in a similar manner.
+
 ## Prerequisites
 - Linux Computer with Grub bootloader
 - QEMU/KVM and virt-manager
